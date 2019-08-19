@@ -57,7 +57,7 @@ rm .env
 
 stop_prod(){
 cp .env.prod .env
-    docker stop $(docker ps -a -q) | xargs docker rm
+    docker-compose down
 rm .env
 }
 
